@@ -1,17 +1,17 @@
 import IStack from "../type/IStack";
 
 class ArrayStack<T> implements IStack<T> {
-  private data: any[] = [];
+  private data: T[] = [];
 
   push(element: T): void {
     this.data.push(element);
   }
 
-  pop(): T {
+  pop(): T | undefined {
     return this.data.pop();
   }
 
-  peek(): T {
+  peek(): T | undefined {
     return this.data[this.data.length - 1];
   }
 
