@@ -22,6 +22,15 @@ class ArrayStack<T> implements IStack<T> {
   size(): number {
     return this.data.length;
   }
+
+  log():string{
+    let binary = ''
+    const copyData = JSON.parse(JSON.stringify(this.data))
+    while(copyData.length > 0){
+        binary += copyData.pop()
+    }
+    return binary
+  }
 }
 
 export default ArrayStack;
