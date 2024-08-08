@@ -16,13 +16,20 @@ function isValid(str: string): boolean {
             arr.push('}')
             break
         default:
-            if(item!==arr.pop()) {
-                result = false
+            if(![')',']','}'].includes(item)){
+                break
             }
+            let reverseItem = arr.pop()
+            while(![')',']','}'].includes(reverseItem) && arr.size() !== 0){
+                reverseItem = arr.pop()
+            }
+            if(item!==reverseItem) {
+                result = false
+            }       
             break
     }
   }
-  return result;
+  return arr.size() === 0 ? result:false;
 }
 
 export default isValid;
