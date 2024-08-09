@@ -19,9 +19,9 @@ function isValid(str: string): boolean {
             if(![')',']','}'].includes(item)){
                 break
             }
-            let reverseItem = arr.pop()
+            let reverseItem = arr.pop() ?? ''
             while(![')',']','}'].includes(reverseItem) && arr.size() !== 0){
-                reverseItem = arr.pop()
+                reverseItem = arr.pop() ?? ''
             }
             if(item!==reverseItem) {
                 result = false
