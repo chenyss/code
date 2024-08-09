@@ -1,4 +1,4 @@
-import ArrayStack from "../stack/ArrayStack";
+import ArrayStack from "../dataStructure/ArrayStack";
 
 function isValid(str: string): boolean {
   let result = true

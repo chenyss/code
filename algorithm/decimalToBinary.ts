@@ -1,4 +1,4 @@
-import ArrayStack from "../stack/ArrayStack"
+import ArrayStack from "../dataStructure/ArrayStack"
 
 function decimalToBinary(decimal:number):string{
     const stack = new ArrayStack<number>()

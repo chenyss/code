@@ -1,4 +1,4 @@
-import Queue from "../stack/Queue";
+import Queue from "../dataStructure/Queue";
 
 function hotPotato(arr: string[], count: number): number {
   if (arr.length === 0) {
